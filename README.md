@@ -1,2 +1,3 @@
 # Full Stack Open MOOC
-Assignments for Helsinki University MOOC course Full Stack Open 2020+2021
+Exercises for Helsinki University MOOC course Full Stack Open 2020+2021
+https://fullstackopen.com/
