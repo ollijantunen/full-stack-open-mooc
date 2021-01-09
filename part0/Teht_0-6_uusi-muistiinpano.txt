@@ -1,0 +1,37 @@
+note over selain:
+Käyttäjä valitsee lomakkeen tekstikentän
+ja kirjoittaa muistiinpanon.
+end note
+note over selain:
+Käyttäjä painaa 'save'-nappia
+tallentaakseen muistiinpanon.
+end note
+note over selain:
+->Lomakkeelle spa.js:ssä asetettu tapahtumankäsittelijä
+estää lomakkeen oletustoiminnan.
+->Käyttäjän luoma muistiinpano lisätään uuteen objektiin 
+ja luodaan sinne aikatieto.
+->Tämä muistiinpano-objekti lisätään selaimessa olevaan taulukkoon.
+->Tekstikenttään asetetaan tyhjä merkkijono.
+->Kutsutaan redrawNotes()-funktiota, joka piirtää kaikki muistiinpano
+uudelleen näytölle
+->Kutsutaan sendToServer(note)-funktiota, joka käskee
+muistiinpanon lähetyksen palvelimelle
+end note
+note right of selain:
+Request header
+("Content-type", "application/json")
+Request body:
+Luotu muistiinpano ja aika JSONina.
+end note
+selain->palvelin: https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note left of palvelin:
+Response body
+{"message":"note created"}
+end note
+palvelin-->selain: SUCCESS (201 CREATED)
+note over selain:
+Selain tulostaa konsoliin palvelimen lähettämän
+viestin, kuten spa.js:ssä komennetaan.
+{"message":"note created"}
+end note
